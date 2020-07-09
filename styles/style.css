@@ -76,10 +76,15 @@ span {
 .kidneys {
     height: auto;
     max-width: 800px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
 }
 
-.quiz-button {
+#quiz-button {
     cursor: pointer;
+    padding: 10px;
+    font-size: larger;
+    box-shadow: 10px 10px 5px 0px var(--color1);
 }
 
 .header {
@@ -96,6 +101,10 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
+
+.text {
+    border: 5px solid gray;
+    padding: 25px;
+}
 
   
