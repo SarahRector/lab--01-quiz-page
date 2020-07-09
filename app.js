@@ -10,10 +10,8 @@ const quizButton = document.getElementById('quiz-button');
 // set event listeners to update state and DOM
 quizButton.addEventListener('click', () => {
     const firstName = prompt("What's your first name?");
-    let name = firstName;
-
     const lastName = prompt("What's your last name?");
-    let fullName = name + ' ' + lastName;
+    const fullName = firstName + ' ' + lastName;
 
     const really = confirm('Do you really want to test your derby knowledge?');
     if (!really) return;
@@ -36,13 +34,13 @@ quizButton.addEventListener('click', () => {
     if (!countsAsAYes(gnarWallsFav)) {
         score++;
     }
+    
+    let response = '';
 
-    let response = 'Congratualtions, ' + fullName + '!';
-
-    if (score >= 1) {
-        response += " You're ready to roll!";
+    if (score > 1) {
+        response = `Congratualations ${fullName}! You're ready to roll!`;
     } else {
-        response += " You're headed to the penalty box! Read up and take the quiz again!";
+        response = `OH NO ${fullName}! You're headed to the penalty box! Read up and take the quiz again!`;
     }
     quizButton.textContent = response;
     
